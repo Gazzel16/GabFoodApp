@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gradient_start">#FFA726</color> <!-- Light orange -->
+    <color name="gradient_end">#EF5350</color>
+    <color name="orange">#FFA500</color>
+
+    <color name="orangeGradientStart">#FF8C00</color> <!-- Darker shade of orange -->
+    <color name="orangeGradientEnd">#FFA500</color> <!-- Standard orange -->
+
+    <color name="button_green">#66BB6A</color>
+
+</resources>
