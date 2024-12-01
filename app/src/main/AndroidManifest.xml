@@ -12,11 +12,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp"
         tools:targetApi="31">
+        <activity android:name=".FoodItemCard"
+            android:exported="false"/>
+        <activity
+            android:name=".PancitBihonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shanghai"
+            android:exported="false" />
+        <activity
+            android:name=".GordonBeefActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PorkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChickenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SmokedPorkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RoastedChickenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BurgerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpicyPizzaActivity"
+            android:exported="false" />
         <activity
             android:name=".MyOrderActivity"
             android:exported="false" />
         <activity
-            android:name=".ItemFoodCardActivity"
+            android:name=".FoodDashboard"
             android:exported="false" />
         <activity
             android:name=".SignupActivity"

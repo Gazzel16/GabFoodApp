@@ -2,7 +2,6 @@ package com.example.foodapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,12 +12,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.foodapp.databasehelper.DBHelper;
+
 public class LoginActivity extends AppCompatActivity {
 
-    Button signupButton;
-    private EditText emailInput;
-    private EditText passwordInput;
-    private Button loginButton;
+    Button signupButton, loginButton;
+    EditText emailInput, passwordInput;
+    DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,33 +32,34 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         signupButton = findViewById(R.id.signupButton);
+        emailInput = findViewById(R.id.emailInput);
+        passwordInput = findViewById(R.id.passwordInput);
+        loginButton = findViewById(R.id.loginButton);
+        dbHelper = new DBHelper(this);
 
         signupButton.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
             startActivity(intent);
         });
 
-        emailInput = findViewById(R.id.emailInput);
-        passwordInput = findViewById(R.id.passwordInput);
-        loginButton = findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(view -> {
+            String emailOrUsername = emailInput.getText().toString();
+            String password = passwordInput.getText().toString();
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = emailInput.getText().toString();
-                String password = passwordInput.getText().toString();
+            if (emailOrUsername.isEmpty() || password.isEmpty()){
+                Toast.makeText(LoginActivity.this,"please enter both password and username", Toast.LENGTH_SHORT).show();
+            }else {
+                if (dbHelper.checkUser(emailOrUsername, password)){
+                    Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
 
-                // Temporary login credentials
-                if (username.equals("gab") && password.equals("gab123")) {
-                    // Navigate to the HomeActivity if credentials are correct
-                    Intent intent = new Intent(LoginActivity.this, ItemFoodCardActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, FoodDashboard.class);
                     startActivity(intent);
-                    finish(); // Close the LoginActivity
-                } else {
-                    // Show a message if credentials are incorrect
-                    Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(LoginActivity.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
                 }
             }
+
         });
+
     }
 }

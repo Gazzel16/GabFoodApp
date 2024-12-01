@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
     android:padding="16dp"
-    tools:context=".ItemFoodCardActivity">
+    tools:context=".FoodDashboard">
 
     <!-- Title Bar with Search -->
     <LinearLayout
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textStyle="bold"
-            android:text="GRAB N' GRAB"
+            android:text="GAB N' GRAB"
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:gravity="center_vertical" />
@@ -60,6 +60,7 @@
 
             <!-- Food Item Card Template -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/spicyPizza"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -111,6 +112,7 @@
             <!-- Duplicate Food Item Cards as Needed -->
             <!-- For example, you can add more cards using a loop in your code -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/burger"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -129,7 +131,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/orange_background" />
+                        android:background="@drawable/burger" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -141,7 +143,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="Food Name"
+                            android:text="Burger"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -149,7 +151,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="PRICE"
+                            android:text="PRICE: 15$"
                             android:textStyle="bold"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="14sp" />
@@ -158,6 +160,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/fries"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -176,7 +179,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/orange_background" />
+                        android:background="@drawable/fries" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -188,7 +191,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="Food Name"
+                            android:text="Fries"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -196,7 +199,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="PRICE"
+                            android:text="PRICE: 3$"
                             android:textStyle="bold"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="14sp" />
@@ -205,6 +208,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/chicken"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -223,7 +227,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/orange_background" />
+                        android:background="@drawable/chicken" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -235,7 +239,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="Food Name"
+                            android:text="Roasted Chicken Whole"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -243,7 +247,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="PRICE"
+                            android:text="PRICE: 40$"
                             android:textStyle="bold"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="14sp" />
@@ -252,6 +256,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/pork"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -270,7 +275,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/orange_background" />
+                        android:background="@drawable/pork" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -282,7 +287,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="Food Name"
+                            android:text="Smoked Pork"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -290,7 +295,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="PRICE"
+                            android:text="PRICE: 39$"
                             android:textStyle="bold"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="14sp" />
@@ -299,6 +304,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/beef"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -317,7 +323,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/orange_background" />
+                        android:background="@drawable/beef" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -329,7 +335,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="Food Name"
+                            android:text="Gordon Beef"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -337,7 +343,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="PRICE"
+                            android:text="PRICE: 45$"
                             android:textStyle="bold"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="14sp" />
@@ -346,10 +352,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/shanghai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/button_border"
+                android:background="@drawable/pork"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp">
 
@@ -364,7 +371,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/orange_background" />
+                        android:background="@drawable/shanghai" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -376,7 +383,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="Food Name"
+                            android:text="Shanghai"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -384,7 +391,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="PRICE"
+                            android:text="PRICE: 10$"
                             android:textStyle="bold"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="14sp" />
@@ -393,6 +400,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/pancit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -411,7 +419,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/orange_background" />
+                        android:background="@drawable/canton" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -423,7 +431,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="Food Name"
+                            android:text="Pancit Bihon"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -431,7 +439,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="180dp"
-                            android:text="PRICE"
+                            android:text="PRICE: 20$"
                             android:textStyle="bold"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="14sp" />
@@ -444,10 +452,11 @@
             <!-- Order Button -->
             <Button
                 android:id="@+id/button_navigate"
-                android:layout_width="180dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:text="Order"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="12dp"
+                android:text="My Orders"
                 android:textStyle="bold"
                 android:background="@drawable/button_border"
                 android:layout_marginTop="16dp" />

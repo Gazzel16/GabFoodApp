@@ -11,5 +11,7 @@
     <color name="orangeGradientEnd">#FFA500</color> <!-- Standard orange -->
 
     <color name="button_green">#66BB6A</color>
+    <color name="dark_orange">#FF8C00</color>
+    <color name="text_gray">#808080</color>
 
 </resources>

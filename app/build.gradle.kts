@@ -25,6 +25,12 @@ android {
             )
         }
     }
+
+    // Move viewBinding block here
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -32,9 +38,7 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.cardview:cardview:1.0.0")
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
